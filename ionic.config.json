@@ -1,0 +1,7 @@
+{
+  "name": "appwrite-yt-chat-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
