@@ -1,4 +1,6 @@
-﻿# Ionic chat application using vue
+﻿# Ref from https://www.youtube.com/watch?v=bWa999O6BnE
+# Ionic chat application using vue
+
 
 ## Home page
 ![picture 0](images/bb144c1cdb382da80eab123e9afd2406be9cd8820135fd1416f3f61db97d5618.png)  
