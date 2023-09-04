@@ -22,11 +22,27 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { appwrite } from './appwrite-lib';
+import { useUserStore } from './userStore';
 
+const { userId, userInfo } = useUserStore(); 
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
+
+// check for user before mounting app
+(async() => {
+  try{
+  const user = await appwrite.account.get();
+  userId.value = user.$id;
+  userInfo.value = user;
+  }catch (error){
+    userId.value = null;
+  }
+
+  router.isReady().then(() => {
+    app.mount('#app');
+  });
+
+})();
   
-router.isReady().then(() => {
-  app.mount('#app');
-});

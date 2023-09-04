@@ -4,9 +4,13 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'appwrite-yt-chat-vue',
   webDir: 'dist',
-  server: {
-    androidScheme: 'https'
-  }
+  
 };
 
 export default config;
+
+// When depolying ios
+// server: {
+//   hostname : 'cloud.appwrite.io',
+//   androidScheme: 'https'
+// }
